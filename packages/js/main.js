@@ -212,7 +212,7 @@ themeButton.addEventListener("click", () => {
 });
 
 <script>
-    function openInNewTabAndDownload(filepath) {
+    function openOrDownload(filepath) {
         const link = document.createElement('a');
         link.href = filepath;
         link.download = filepath.split('/').pop();
