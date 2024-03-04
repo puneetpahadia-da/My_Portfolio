@@ -212,13 +212,12 @@ themeButton.addEventListener("click", () => {
 });
 
 <script>
-    function openOrDownload(filepath) {
+    function openInNewTabAndDownload(filepath) {
+        const newTab = window.open(filepath, '_blank');
         const link = document.createElement('a');
         link.href = filepath;
-        link.download = filepath.split('/').pop();
-        link.target = '_blank';
-        document.body.appendChild(link);
+        link.download = filepath;
+        link.target = '_blank'; 
         link.click();
-        document.body.removeChild(link);
     }
 </script>
