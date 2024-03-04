@@ -210,3 +210,16 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
+
+<script>
+    function openInNewTabAndDownload(filepath) {
+        const newTab = window.open(filepath, '_blank');
+        const link = document.createElement('a');
+        link.href = filepath;
+        link.download = filepath;
+        link.target = '_blank'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
